@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.5
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -150,6 +150,12 @@ x->sin(x)
 # ╔═╡ 98498f84-76ab-11eb-23cf-857c776a9163
 (x->sin(x))(π/2)
 
+# ╔═╡ d6c68a93-22b2-49a2-83b4-a7361f03e1b2
+my_sin = x -> sin(x)
+
+# ╔═╡ 76cf2359-cfb9-46a7-a651-4ffa336b00e9
+my_sin(π/2)
+
 # ╔═╡ c6c860a6-76ab-11eb-1dec-1b2f179a0fa9
 # long form
 function f₃(x,α=3) # default parameter
@@ -171,7 +177,7 @@ Keywords
 f₄(x;α) = x^α
 
 # ╔═╡ 87b99c8a-76ac-11eb-1c94-8f1ffe3be593
-f₄(2, α=5)
+f₄(2, α = 5)
 
 # ╔═╡ 504076fc-76ac-11eb-30c3-bfa75c991cb2
 md"""
@@ -189,10 +195,10 @@ Automatic differentiation is a key enabling technology for machine learning and 
 """
 
 # ╔═╡ d42aec08-76ad-11eb-361a-a1f2c90fd4ec
-ForwardDiff.derivative(f₁, 5)
+ForwardDiff.derivative(f₁, 5) # derivative of x² is 2x
 
 # ╔═╡ 06437040-76ae-11eb-0b1c-23a6470f41c8
-ForwardDiff.derivative( x->f₃(x,3), 5)
+ForwardDiff.derivative( x->f₃(x,3), 5) # derivative of x³ is 3x²
 
 # ╔═╡ 28cd454c-76ae-11eb-0d1e-a56995100d59
 md"""
@@ -546,6 +552,9 @@ img_sources = [
 	"https://images.squarespace-cdn.com/content/v1/5cb62a904d546e33119fa495/1589302981165-HHQ2A4JI07C43294HVPD/ke17ZwdGBToddI8pDm48kA7bHnZXCqgRu4g0_U7hbNpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PISCdr-3EAHMyS8K84wLA7X0UZoBreocI4zSJRMe1GOxcKMshLAGzx4R3EDFOm1kBS/fluffy+corgi?format=2500w" => "Long Corgi"
 ]
 
+# ╔═╡ 904efa28-d028-4b0c-848a-0e5581e0ebf2
+img_sources
+
 # ╔═╡ c0c90fec-0e55-4be3-8ea2-88b8705ee258
 md"""
 #### Choose an image:
@@ -654,6 +663,8 @@ opacity: .8;
 # ╠═81a00b78-76ab-11eb-072a-6b96847c2ce4
 # ╠═2369fb18-76ab-11eb-1189-85309c8f925b
 # ╠═98498f84-76ab-11eb-23cf-857c776a9163
+# ╠═d6c68a93-22b2-49a2-83b4-a7361f03e1b2
+# ╠═76cf2359-cfb9-46a7-a651-4ffa336b00e9
 # ╠═c6c860a6-76ab-11eb-1dec-1b2f179a0fa9
 # ╠═f07fbc6c-76ab-11eb-3382-87c7d65b4078
 # ╠═f4fa8c1a-76ab-11eb-302d-bd410432e3cf
@@ -667,13 +678,13 @@ opacity: .8;
 # ╠═06437040-76ae-11eb-0b1c-23a6470f41c8
 # ╟─28cd454c-76ae-11eb-0d1e-a56995100d59
 # ╟─38b51946-76ae-11eb-2c8a-e19b30bf42cb
-# ╟─632a1f8c-76ae-11eb-2088-15c3e3c0a210
-# ╟─8a99f186-76af-11eb-031b-f1c288993c7f
+# ╠═632a1f8c-76ae-11eb-2088-15c3e3c0a210
+# ╠═8a99f186-76af-11eb-031b-f1c288993c7f
 # ╠═ca1dfb8a-76b0-11eb-1323-d100bdeedc2d
 # ╟─f7df6cda-76b1-11eb-11e4-8d0af0349651
 # ╟─63449b54-76b4-11eb-202f-3bda2f4cff4d
 # ╠═8c6b0236-76b4-11eb-2acf-91da23bedf0e
-# ╟─a397d526-76b5-11eb-3cce-4374e33324d1
+# ╠═a397d526-76b5-11eb-3cce-4374e33324d1
 # ╟─4a57d898-76b6-11eb-15ea-7be43393922c
 # ╠═bf23ab30-76b5-11eb-1adb-3d74a52cddfd
 # ╠═d5d4ac48-76b6-11eb-1687-ed853c2db7c9
@@ -711,9 +722,10 @@ opacity: .8;
 # ╟─ad728ee6-7639-11eb-0b23-c37f1366fb4e
 # ╟─4d4e6b32-763b-11eb-3021-8bc61ac07eea
 # ╟─2e8c4a48-d535-44ac-a1f1-4cb26c4aece6
-# ╟─c0c90fec-0e55-4be3-8ea2-88b8705ee258
+# ╠═904efa28-d028-4b0c-848a-0e5581e0ebf2
+# ╠═c0c90fec-0e55-4be3-8ea2-88b8705ee258
 # ╟─ce55beee-7643-11eb-04bc-b517703facff
-# ╟─005ca75a-7622-11eb-2ba4-9f450e71df1f
+# ╠═005ca75a-7622-11eb-2ba4-9f450e71df1f
 # ╠═ed3caab2-76bf-11eb-2544-21e8181adef5
 # ╟─2efaa336-7630-11eb-0c17-a7d4a0141dac
 # ╟─488d732c-7631-11eb-38c3-e9a9165d5606

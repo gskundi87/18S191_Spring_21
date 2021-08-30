@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.5
+# v0.15.1
 
 using Markdown
 using InteractiveUtils
@@ -409,6 +409,9 @@ md"""By rotating the axes we can "look in different directions" and calculate th
 # ╔═╡ e8276b4e-f86f-11ea-38be-218a72452b10
 M = [xs_centered ys_centered]'
 
+# ╔═╡ 3156670b-c256-40ec-9b14-f91aeb8a883d
+eigvals(cov(M'))
+
 # ╔═╡ 1f373bd0-853f-11eb-0f8e-19cb7f376182
 eigvals(cov(M')) .* 199
 
@@ -542,6 +545,9 @@ end
 
 # ╔═╡ 6646abe0-835b-11eb-328a-55ca22f89c7d
 σs = svdvals(M)
+
+# ╔═╡ c6df7b63-bdb4-46e0-acc0-2bea623c256d
+σs
 
 # ╔═╡ 31e4b138-84e8-11eb-36a8-8b90746fbb0f
 variances = σs.^2 ./ 199
@@ -884,7 +890,9 @@ ff(rand(total), m, n)
 # ╟─3547f296-f86f-11ea-1698-53d3c1a0bc30
 # ╟─7a83101e-f871-11ea-1d87-4946162777b5
 # ╠═e8276b4e-f86f-11ea-38be-218a72452b10
+# ╠═3156670b-c256-40ec-9b14-f91aeb8a883d
 # ╠═1f373bd0-853f-11eb-0f8e-19cb7f376182
+# ╠═c6df7b63-bdb4-46e0-acc0-2bea623c256d
 # ╠═31e4b138-84e8-11eb-36a8-8b90746fbb0f
 # ╟─d71fdaea-f86f-11ea-1a1f-45e4d50926d3
 # ╠═757c6808-f8fe-11ea-39bb-47e4da65113a
